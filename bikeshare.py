@@ -40,6 +40,7 @@ def get_filters():
 
 
     # TO DO: get user input for month (all, january, february, ... , june)
+    """creating a list for months"""
     month_list = ["all", "january", "february","march", "april", "may", "june"]
     month = ''
     while month not in month_list:
@@ -49,6 +50,7 @@ def get_filters():
             print("The month you entered does not match.")
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    """creating a list for days"""
     day_list = ["all", "sunday", "monday","tuesday", "wednesday", "thursday", "friday", "saturday"]
     day = ''
     while day not in day_list:
@@ -91,6 +93,7 @@ def load_data(city, month, day):
     # filter by month if applicable
     if month != 'all':
         # use the index of the months list to get the corresponding int
+        """creating a list for months"""
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
 
