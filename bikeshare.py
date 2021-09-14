@@ -16,7 +16,6 @@ import pandas as pd
 import numpy as np
 import datetime as dt
 
-
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -41,6 +40,7 @@ def get_filters():
 
 
     # TO DO: get user input for month (all, january, february, ... , june)
+    """creating a list for months"""
     month_list = ["all", "january", "february","march", "april", "may", "june"]
     month = ''
     while month not in month_list:
@@ -50,6 +50,7 @@ def get_filters():
             print("The month you entered does not match.")
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    """creating a list for days"""
     day_list = ["all", "sunday", "monday","tuesday", "wednesday", "thursday", "friday", "saturday"]
     day = ''
     while day not in day_list:
@@ -92,6 +93,7 @@ def load_data(city, month, day):
     # filter by month if applicable
     if month != 'all':
         # use the index of the months list to get the corresponding int
+        """creating a list for months"""
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
 
@@ -104,7 +106,6 @@ def load_data(city, month, day):
         df = df[df['day_of_week'] == day.title()]
 
     return df
-
 
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
@@ -128,7 +129,6 @@ def time_stats(df):
     df['Day'] = df['Start Time'].dt.weekday_name
     popular_day = df['Day'].mode()[0]
     print('Most Popular Day:', popular_day)
-
 
     # TO DO: display the most common start hour
 
@@ -159,7 +159,6 @@ def station_stats(df):
     common_end_station = df['Start Station'].mode()[0]
 
     print('Most commonly used end Station:', common_end_station)
-
 
     # TO DO: display most frequent combination of start station and end station trip
     df['combo_station'] = df['Start Station'] + ' to ' +df ['End Station']
