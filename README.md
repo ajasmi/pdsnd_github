@@ -38,7 +38,7 @@ earliest, most recent, most common year of birth (only available for NYC and Chi
 w3schools.com >> for loops
 https://www.tutorialspoint.com/python/python_dictionary.htm>> for using get
 https://www.tutorialspoint.com/python/dictionary_get.htm
-udacity nanodegree practice problems
+Udacity Nanodegree Practice Problems
 https://stackoverflow.com/questions/50882377/how-do-you-convert-a-numpy-float64-to-python-native-string-type-for-writing-to-a>> convert to string
 https://www.studytonight.com/python-howtos/how-to-get-month-name-from-month-number-in-python>> converting month number to name
 https://pandas.pydata.org/
